@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Facts | Discover Toledo</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,500;1,9..144,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<header class="site-header" id="siteHeader">
+    <a href="index.html" class="brand"><span class="logo-icon">DT</span><span><b>Discover</b> Toledo</span></a>
+    <nav class="site-nav" id="sidebar" aria-label="Main"><a href="index.html" class="nav-link">Home</a><a href="history.html" class="nav-link">History</a><a href="places.html" class="nav-link">Places</a><a href="mayors.html" class="nav-link">Mayors</a><a href="facts.html" class="nav-link active">Facts</a><a href="quiz.html" class="nav-link quiz-link">Quiz</a></nav>
+    <button class="menu-btn" onclick="toggleSidebar()" aria-label="Open menu" aria-expanded="false">☰</button>
+    <div class="read-progress" id="readProgress"></div>
+</header>
+
+
+
+<main class="main-content">
+
+    <section class="page-hero facts-hero">
+        <div>
+            <span class="hero-label">TOLEDO BY THE NUMBERS</span>
+            <h1>Facts &amp; <span>Figures</span></h1>
+            <p>Everything measurable about Toledo City: people, places, weather, industry and government.</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="section-heading">
+            <span class="section-label">CITY PROFILE</span>
+            <h2>Toledo <span>at a glance.</span></h2>
+            <p>Toledo (tə-LED-oh), in Cebuano <em>Dakbayan sa Toledo</em>, is a component city in Cebu province. It is named after Toledo, Spain, and its patron saint is John of Sahagun.</p>
+        </div>
+        <div class="profile-grid" id="profileGrid"></div>
+    </section>
+
+    <section class="section discover-section">
+        <div class="section-heading">
+            <span class="section-label">POPULATION</span>
+            <h2>How Toledo <span>grew.</span></h2>
+            <p>Toledo grew from about 13,000 people in 1903 to more than 206,000 in 2024. Hover or tap a bar for the exact count and yearly growth.</p>
+        </div>
+        <div class="chart-card">
+            <div class="bars" id="popBars" role="img" aria-label="Bar chart of Toledo population from 1903 to 2024"></div>
+            <p class="chart-readout" id="popReadout">Tap a bar to see the census count.</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="section-heading">
+            <span class="section-label">38 BARANGAYS</span>
+            <h2>Find your <span>barangay.</span></h2>
+            <p>Ten barangays are urban and twenty-eight are rural. Search by name or sort by 2024 population and growth since 2010.</p>
+        </div>
+        <div class="table-tools">
+            <input type="search" id="brgySearch" placeholder="Search a barangay, e.g. Poblacion" aria-label="Search barangays">
+            <div class="sort-btns" role="group" aria-label="Sort barangays">
+                <button type="button" class="chip active" data-sort="name">A–Z</button>
+                <button type="button" class="chip" data-sort="pop">Largest</button>
+                <button type="button" class="chip" data-sort="growth">Fastest growing</button>
+            </div>
+        </div>
+        <div class="table-wrap">
+            <table class="data-table">
+                <thead><tr><th>Barangay</th><th class="num">2024</th><th class="num">2010</th><th class="num">Growth / year</th></tr></thead>
+                <tbody id="brgyBody"></tbody>
+            </table>
+        </div>
+        <p class="table-note" id="brgyCount"></p>
+    </section>
+
+    <section class="section discover-section">
+        <div class="section-heading">
+            <span class="section-label">CLIMATE</span>
+            <h2>Warm all year, <span>wet from May.</span></h2>
+            <p>Highs stay between 28 and 31 °C. Rain falls on about 253 days a year, with June to October the wettest months. Source: Meteoblue.</p>
+        </div>
+        <div class="chart-card">
+            <div class="bars climate" id="climateBars" role="img" aria-label="Average monthly rainfall in millimetres"></div>
+            <p class="chart-readout" id="climateReadout">Tap a month to see temperature and rain.</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="section-heading">
+            <span class="section-label">ECONOMY</span>
+            <h2>Copper city, <span>power city.</span></h2>
+            <p>Toledo is a 1st class city by income. Its 2022 revenue was ₱2,198 million against ₱1,789 million in expenditure, with ₱6,960 million in assets. Poverty incidence was 32.38% in 2021.</p>
+        </div>
+        <div class="feature-grid" id="industryGrid"></div>
+
+        <div class="chart-card poverty-card">
+            <h3>Poverty incidence over time</h3>
+            <div class="bars poverty" id="povBars" role="img" aria-label="Poverty incidence percent by year"></div>
+            <p class="chart-readout" id="povReadout">It dropped to 17.20% in 2018, then rose to 32.38% in 2021.</p>
+        </div>
+    </section>
+
+    <section class="section discover-section">
+        <div class="section-heading">
+            <span class="section-label">GEOGRAPHY</span>
+            <h2>Where Toledo <span>sits.</span></h2>
+            <p>Toledo is the only Cebu city on the western seaboard, facing Negros Oriental across the Tañon Strait. It sits at 10°23′N 123°39′E, rising from sea level to 981 m.</p>
+        </div>
+        <div class="feature-grid" id="geoGrid"></div>
+    </section>
+
+    <section class="section">
+        <div class="section-heading">
+            <span class="section-label">PEOPLE &amp; LEARNING</span>
+            <h2>Notable <span>Toledanos.</span></h2>
+            <p>Toledo City Science High School, founded in 1996 in Ilihan Heights, is the city’s DepEd-recognized science high school.</p>
+        </div>
+        <div class="leadership-list" id="notableList"></div>
+    </section>
+
+    <section class="quote-section">
+        <div>
+            <span>FACTS FROM</span>
+            <h2>Wikipedia, PSA census data and Meteoblue.</h2>
+        </div>
+    </section>
+
+    <footer>
+    <div class="footer-top">
+        <div class="footer-logo"><span class="logo-icon">DT</span><div><strong>Discover Toledo</strong><small>Toledo City, Cebu</small></div></div>
+        <nav class="footer-nav" aria-label="Footer"><a href="index.html">Home</a><a href="history.html">History</a><a href="places.html">Places</a><a href="mayors.html">Mayors</a><a href="facts.html">Facts</a><a href="quiz.html">Quiz</a></nav>
+        <div class="footer-meta">The Copper City with the Heart of Gold.<br>Facts from Wikipedia, PSA census data and Meteoblue.</div>
+    </div>
+    <p>© 2026 Discover Toledo. A Mini Capstone Project.</p>
+</footer>
+
+</main>
+
+<script src="js/script.js"></script>
+
+<button class="to-top" id="toTop" aria-label="Back to top">↑</button>
+</body>
+
+</html>

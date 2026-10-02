@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Places | Discover Toledo</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,500;1,9..144,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<header class="site-header" id="siteHeader">
+    <a href="index.html" class="brand"><span class="logo-icon">DT</span><span><b>Discover</b> Toledo</span></a>
+    <nav class="site-nav" id="sidebar" aria-label="Main"><a href="index.html" class="nav-link">Home</a><a href="history.html" class="nav-link">History</a><a href="places.html" class="nav-link active">Places</a><a href="mayors.html" class="nav-link">Mayors</a><a href="facts.html" class="nav-link">Facts</a><a href="quiz.html" class="nav-link quiz-link">Quiz</a></nav>
+    <button class="menu-btn" onclick="toggleSidebar()" aria-label="Open menu" aria-expanded="false">☰</button>
+    <div class="read-progress" id="readProgress"></div>
+</header>
+
+
+
+<main class="main-content">
+
+    <section class="page-hero places-hero">
+
+        <div>
+
+            <span class="hero-label">
+                EXPLORE TOLEDO
+            </span>
+
+            <h1>
+                Places to
+                <span>Discover</span>
+            </h1>
+
+            <p>
+                Explore some of the natural attractions and destinations
+                that make Toledo City interesting.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <section class="section">
+
+        <div class="section-heading">
+
+            <span class="section-label">
+                DESTINATIONS
+            </span>
+
+            <h2>
+                Discover places around
+                <span>Toledo.</span>
+            </h2>
+
+            <p>
+                From natural landscapes to community destinations,
+                Toledo offers places where visitors can explore,
+                relax, and experience the city.
+            </p>
+
+        </div>
+
+
+        <div class="places-grid" id="placesGrid">
+            <!-- Destination cards are rendered by js/script.js -->
+        </div>
+
+        <noscript>
+            <p class="places-noscript">
+                Please enable JavaScript to view the interactive
+                list of Toledo City destinations.
+            </p>
+        </noscript>
+
+    </section>
+
+
+    <section class="explore-banner">
+
+        <div>
+
+            <span>MORE TO DISCOVER</span>
+
+            <h2>
+                Every place has
+                a story.
+            </h2>
+
+            <p>
+                Explore Toledo with curiosity and appreciation.
+            </p>
+
+        </div>
+
+        <a href="quiz.html" class="btn primary-btn">
+            Test Your Knowledge →
+        </a>
+
+    </section>
+
+
+    <footer>
+    <div class="footer-top">
+        <div class="footer-logo"><span class="logo-icon">DT</span><div><strong>Discover Toledo</strong><small>Toledo City, Cebu</small></div></div>
+        <nav class="footer-nav" aria-label="Footer"><a href="index.html">Home</a><a href="history.html">History</a><a href="places.html">Places</a><a href="mayors.html">Mayors</a><a href="facts.html">Facts</a><a href="quiz.html">Quiz</a></nav>
+        <div class="footer-meta">The Copper City with the Heart of Gold.<br>Facts from Wikipedia, PSA census data and Meteoblue.</div>
+    </div>
+    <p>© 2026 Discover Toledo. A Mini Capstone Project.</p>
+</footer>
+
+</main>
+
+
+<div
+    class="place-modal"
+    id="placeModal"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="placeModalTitle"
+    aria-hidden="true"
+>
+
+    <div class="place-modal-panel" role="document">
+
+        <button
+            type="button"
+            class="place-modal-close"
+            id="placeModalClose"
+            aria-label="Close place details"
+        >
+            &times;
+        </button>
+
+        <div class="place-modal-media">
+
+            <img id="placeModalImage" alt="">
+
+            <div class="place-modal-titles">
+
+                <span
+                    class="place-modal-category"
+                    id="placeModalCategory"
+                ></span>
+
+                <h2 class="place-modal-title" id="placeModalTitle"></h2>
+
+            </div>
+
+        </div>
+
+        <div
+            class="place-modal-body"
+            id="placeModalBody"
+            tabindex="0"
+        ></div>
+
+    </div>
+
+</div>
+
+
+<script src="js/script.js"></script>
+
+<button class="to-top" id="toTop" aria-label="Back to top">↑</button>
+</body>
+</html>

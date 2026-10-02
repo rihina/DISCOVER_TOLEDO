@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Quiz | Discover Toledo</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,500;1,9..144,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<header class="site-header" id="siteHeader">
+    <a href="index.html" class="brand"><span class="logo-icon">DT</span><span><b>Discover</b> Toledo</span></a>
+    <nav class="site-nav" id="sidebar" aria-label="Main"><a href="index.html" class="nav-link">Home</a><a href="history.html" class="nav-link">History</a><a href="places.html" class="nav-link">Places</a><a href="mayors.html" class="nav-link">Mayors</a><a href="facts.html" class="nav-link">Facts</a><a href="quiz.html" class="nav-link active quiz-link">Quiz</a></nav>
+    <button class="menu-btn" onclick="toggleSidebar()" aria-label="Open menu" aria-expanded="false">☰</button>
+    <div class="read-progress" id="readProgress"></div>
+</header>
+
+
+
+<main class="main-content">
+
+    <section class="quiz-hero">
+
+        <div class="quiz-hero-content">
+
+            <span class="hero-label">
+                TEST YOUR KNOWLEDGE
+            </span>
+
+            <h1>
+                How well do you
+                <span>know Toledo?</span>
+            </h1>
+
+            <p>
+                Ten random questions from a bank of twenty-two. Answer correctly in a row to build a streak, and read the fun fact after every answer.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <section class="quiz-section">
+
+        <div class="quiz-container" id="quizContainer">
+
+            <div class="quiz-top">
+
+                <div>
+                    <span class="section-label">
+                        TOLEDO CITY QUIZ
+                    </span>
+
+                    <h2 id="questionNumber">
+                        Question 1 of 10
+                    </h2>
+                </div>
+
+                <div class="score-display">
+                    Score:
+                    <strong id="score">0</strong>
+                    <small class="streak" id="streak"></small>
+                </div>
+
+            </div>
+
+
+            <div class="progress">
+
+                <div
+                    class="progress-bar"
+                    id="progressBar">
+                </div>
+
+            </div>
+
+
+            <div class="question-card">
+
+                <span class="question-category" id="questionCategory">
+                    HISTORY
+                </span>
+
+                <h2 id="question">
+                    Loading question...
+                </h2>
+
+                <div
+                    class="answers"
+                    id="answers">
+                </div>
+
+            </div>
+
+
+            <button
+                class="next-btn"
+                id="nextBtn"
+                onclick="nextQuestion()"
+                disabled>
+
+                Next Question →
+
+            </button>
+
+        </div>
+
+
+        <!-- RESULT -->
+        <div
+            class="quiz-result"
+            id="quizResult"
+            style="display:none;">
+
+            <div class="result-icon">
+                ★
+            </div>
+
+            <span class="section-label">
+                QUIZ COMPLETE
+            </span>
+
+            <h2>
+                You scored
+                <span id="finalScore">0</span>
+                / <span id="totalQ">10</span>
+            </h2>
+
+            <p id="resultMessage">
+                Great job!
+            </p>
+
+            <p class="result-rank" id="resultRank"></p>
+
+            <div class="result-buttons">
+
+                <button
+                    class="btn primary-btn"
+                    onclick="restartQuiz()">
+
+                    Try Again
+
+                </button>
+
+                <a
+                    href="index.html"
+                    class="btn outline-dark-btn">
+
+                    Back Home
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <footer>
+    <div class="footer-top">
+        <div class="footer-logo"><span class="logo-icon">DT</span><div><strong>Discover Toledo</strong><small>Toledo City, Cebu</small></div></div>
+        <nav class="footer-nav" aria-label="Footer"><a href="index.html">Home</a><a href="history.html">History</a><a href="places.html">Places</a><a href="mayors.html">Mayors</a><a href="facts.html">Facts</a><a href="quiz.html">Quiz</a></nav>
+        <div class="footer-meta">The Copper City with the Heart of Gold.<br>Facts from Wikipedia, PSA census data and Meteoblue.</div>
+    </div>
+    <p>© 2026 Discover Toledo. A Mini Capstone Project.</p>
+</footer>
+
+</main>
+
+
+<script src="js/script.js"></script>
+
+<button class="to-top" id="toTop" aria-label="Back to top">↑</button>
+</body>
+</html>
